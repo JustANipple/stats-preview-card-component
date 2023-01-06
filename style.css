@@ -1,0 +1,131 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  /* Custom properties */
+  :root {
+    /* Primary clr */
+    --main-background-clr: hsl(233, 47%, 7%);
+    --card-background-clr: hsl(244, 38%, 16%);
+    --accent-clr: hsl(277, 64%, 61%);
+    /* Neutral clr */
+    --main-heading-stats-clr: hsl(0, 0%, 100%);
+    --main-par-clr: hsla(0, 0%, 100%, 0.75);
+    --stat-headings-clr: hsla(0, 0%, 100%, 0.6);
+    /* Font size */
+    --body-fs: 15px;
+    /* Font families */
+    --ff-one: 'Inter', sans-serif;
+    --ff-two: 'Lexend Deca', sans-serif;
+  }
+
+  /* Styles */
+  body {
+    font-size: var(--body-fs);
+    background-color: var(--main-background-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    background-color: var(--card-background-clr);
+    display: flex;
+    margin: 1.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .textBox,
+  .imageBox {
+    flex: 1;
+  }
+
+  .textBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imageBox {
+    background-image: url(images/image-header-desktop.jpg);
+    background-size: cover;
+  }
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    background: hsla(277, 100%, 24%, 0.575);
+  }
+
+  .inner {
+    padding: 5rem 4rem 3rem 4rem;
+    height: 100%;
+  }
+
+  h1 {
+    color: var(--main-heading-stats-clr);
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+    font-family: var(--ff-one);
+    padding: 0 1.5rem 0 0;
+  }
+
+  span {
+    color: var(--accent-clr);
+  }
+
+  .main-par {
+    font-family: var(--ff-one);
+    color: var(--main-par-clr);
+    margin: 2rem 2rem 4.3rem 0;
+  }
+
+  .stats {
+    display: flex;
+    font-family: var(--ff-one);
+  }
+
+  .stat-one,
+  .stat-two,
+  .stat-three {
+    flex: 1;
+  }
+
+  .stats h2 {
+    color: var(--main-heading-stats-clr);
+  }
+
+  .stat-three h2 {
+    text-transform: uppercase;
+  }
+
+  .stats p {
+    color: var(--stat-headings-clr);
+    text-transform: uppercase;
+    font-family: var(--ff-two);
+  }
