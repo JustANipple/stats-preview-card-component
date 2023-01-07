@@ -103,6 +103,7 @@
     font-family: var(--ff-one);
     color: var(--main-par-clr);
     margin: 2rem 2rem 4.3rem 0;
+    line-height: 1.5rem;
   }
 
   .stats {
@@ -128,4 +129,45 @@
     color: var(--stat-headings-clr);
     text-transform: uppercase;
     font-family: var(--ff-two);
+  }
+
+  @media screen and (max-width: 900px) {
+    .container {
+      flex-flow: column-reverse;
+    }
+
+    .imageBox {
+      background-image: url(images/image-header-mobile.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .overlay {
+      height: 240px;
+    }
+
+    h1 {
+      font-size: 1.7rem;
+      padding: 0;
+    }
+
+    .inner {
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .main-par {
+      margin: 0.5rem;
+      line-height: 1.5rem;
+    }
+
+    .stats {
+      display: inline-block;
+    }
+    
+    .stat-one,
+    .stat-two,
+    .stat-three {
+      margin: 1.5rem;
+    }
   }
